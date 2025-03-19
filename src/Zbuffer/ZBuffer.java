@@ -20,7 +20,10 @@ public class ZBuffer {
             depthBuffer.setValue(x,y,z);
         }
     }
-
+    public void clear()
+    {
+        depthBuffer.clear();
+    }
     public ImageBuffer getImageBuffer(){
         return (ImageBuffer) imageBuffer;
     }

@@ -15,7 +15,6 @@ public class DepthBuffer implements Raster<Double> {
 
     @Override
     public void clear() {
-        // TODO: implementovat
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
                 buffer[i][j] = defaultValue;
@@ -40,14 +39,15 @@ public class DepthBuffer implements Raster<Double> {
 
     @Override
     public Double getValue(int x, int y) {
-        // TODO: implementovat
-        return null;
-        return buffer[x][y];
+        if(this.isInside(x,y)) {
+            return buffer[x][y];
+        }
+        else
+            return 0d;
     }
 
     @Override
     public void setValue(int x, int y, Double value) {
-        // TODO: implementovat
         buffer[x][y] = value;
     }
 }

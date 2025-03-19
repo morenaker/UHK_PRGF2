@@ -8,7 +8,6 @@ import java.awt.image.BufferedImage;
 public class ImageBuffer implements Raster<Col> {
     private final BufferedImage img;
     private Col color;
-
     public ImageBuffer(int width, int height) {
         img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     }
@@ -61,3 +60,4 @@ public class ImageBuffer implements Raster<Col> {
     }
 
 }
+
